@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced JavaScript Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+
+    <div class="calculator-container">
+        <input type="text" class="calculator-screen" id="calculator-screen" readonly>
+        <div class="calculator-keys">
+            <button class="key clear-key" onclick="clearScreen()">AC</button>
+            <button class="key" onclick="displayValue('%')">%</button>
+            <button class="key" onclick="backspace()">⌫</button>
+            <button class="key" onclick="displayValue('/')">/</button>
+            
+            <button class="key" onclick="displayValue('7')">7</button>
+            <button class="key" onclick="displayValue('8')">8</button>
+            <button class="key" onclick="displayValue('9')">9</button>
+           
+            <button class="key" onclick="displayValue('*')">*</button>
+            
+
+            <button class="key" onclick="displayValue('4')">4</button>
+            <button class="key" onclick="displayValue('5')">5</button>
+            <button class="key" onclick="displayValue('6')">6</button>
+            <button class="key" onclick="displayValue('-')">-</button>
+            
+            <button class="key" onclick="displayValue('1')">1</button>
+            <button class="key" onclick="displayValue('2')">2</button>
+            <button class="key" onclick="displayValue('3')">3</button>
+            <button class="key" onclick="displayValue('+')">+</button>
+            
+            <button class="key" onclick="displayValue('00')">00</button>
+            <button class="key" onclick="displayValue('0')">0</button>
+            <button class="key equal-key" onclick="calculateResult()">=</button>
+            
+
+            
+        </div>
+    </div>
+
+    <script src="cal.js">  </script>
+</body>
+
+</html>

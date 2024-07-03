@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("cal.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator-container {
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.calculator-container:hover {
+    transform: translateY(-10px);
+}
+
+.calculator-screen {
+    width: 99%;
+    background-color: #837f7f;
+    color: #fff;
+    height: 60px;
+    
+    
+    font-size: 2rem;
+    text-align: right;
+    
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    
+}
+
+.key {
+    background-color: #729576;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: 1px solid black;
+}
+
+.key:hover {
+    background-color: #555;
+}
+
+.clear-key {
+    background-color: #f44336;
+}
+
+.equal-key {
+    background-color: #4caf50;
+    grid-column: span 2;
+}
+
+@keyframes button-click {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.key:active {
+    animation: button-click 0.2s;
+}
